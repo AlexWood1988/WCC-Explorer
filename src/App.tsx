@@ -30,7 +30,6 @@ import { darkTheme, lightTheme } from "./themes/jadeTheme";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import NotesIcon from "@material-ui/icons/Notes";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
-import CodeIcon from "@material-ui/icons/Code";
 import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 import useInterval from "use-interval";
 import ETHJSONSpec from "@etclabscore/ethereum-json-rpc-specification/openrpc.json";
@@ -271,7 +270,7 @@ function App(props: any) {
                     </Grid>
                     <Grid>
                       <Typography color="textSecondary" variant="h6">
-                        {t("Expedition")}
+                        {t("World Cup Chain")}
                       </Typography>
                     </Grid>
                   </Grid>
@@ -339,15 +338,7 @@ function App(props: any) {
                     <NotesIcon />
                   </IconButton>
                 </Tooltip>
-                <Tooltip title={t("Expedition Github") as string}>
-                  <IconButton
-                    onClick={() =>
-                      window.open("https://github.com/xops/expedition")
-                    }
-                  >
-                    <CodeIcon />
-                  </IconButton>
-                </Tooltip>
+
                 <Tooltip title={t("Toggle Dark Mode") as string}>
                   <IconButton onClick={darkMode.toggle}>
                     {darkMode.value ? <Brightness3Icon /> : <WbSunnyIcon />}
