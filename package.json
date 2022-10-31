@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "lint": "tslint -p tsconfig.json",
-    "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'"
+    "version": "cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "@etclabscore/eserialize": "^1.0.2",
@@ -68,6 +70,7 @@
     "@types/react-dom": "^16.9.16",
     "@types/react-router-dom": "^5.1.1",
     "@types/victory": "^31.0.19",
+    "gh-pages": "^4.0.0",
     "react-scripts": "^3.4.3",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.5.0",
